@@ -9,7 +9,7 @@ import "uDataPacketBroker/v1/packet.proto";
  * Note, during startup when a backfill is occurring, there is no guarantee that
  * newly acquired data will not be interspersed with backfilling data.
  */
-service PublishService {
+service SubscribeService {
     /// Streams the lastest packets from all data streams.  This subscribes to every available 
     /// data stream.  Each data stream subscription commences with the last packet received.
     rpc StreamAll(StreamAllRequest) returns(stream Packet) {};
