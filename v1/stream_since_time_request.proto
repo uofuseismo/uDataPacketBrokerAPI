@@ -1,10 +1,10 @@
 edition = "2023";
 import "google/protobuf/timestamp.proto";
 
-package uDataPacketBrokerAPI.V1;
+package UDataPacketBrokerAPI.V1;
 
 /**
- * Requests data packets from the client starting at a certain point in time.
+ * Requests data packets from the client starting at a certain time.
  */
 message StreamSinceRequest {
    /// A request identifier.
