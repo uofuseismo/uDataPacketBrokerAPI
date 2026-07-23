@@ -21,10 +21,10 @@ service SubscribeService {
     /// (Re)commences streaming from all data streams based on a global sequence number.  
     /// After backfill has occurred this behaves like a StreamAll request
     /// where only real-time data is received.
-    rpc StreamAllFromSequence(stream Packet) returns(PublishResponse) {}; 
+    rpc StreamAllFromSequence(stream Packet) returns(stream Packet) {}; 
 
     /// (Re)commences streaming from selected data streams based on the sequence 
     /// numbers.  After backfill has occurred this behaves like a StreamSelected request
     /// where only real-time data is received.
-    rpc StreamSelectedFromSequence(stream Packet) returns(PublishResponse) {}; 
+    rpc StreamSelectedFromSequence(stream Packet) returns(stream Packet) {}; 
 }
