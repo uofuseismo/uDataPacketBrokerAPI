@@ -1,4 +1,4 @@
-[About]
+# About
 
 This is a data packet broker (middleware) which is typically deployed as a stateful set.  It supports two use cases as shown in the
 diagram.
