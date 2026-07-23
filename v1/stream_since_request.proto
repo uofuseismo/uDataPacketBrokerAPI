@@ -1,0 +1,15 @@
+edition = "2023";
+import "google/protobuf/timestamp.proto";
+
+package uDataPacketBrokerAPI.V1;
+
+/**
+ * Requests data packets from the client starting at a certain point in time.
+ */
+message StreamSinceRequest {
+   /// A request identifier.
+   string identifier = 1 [default = ""];
+   /// Requests data received after this time.  Note, this is not the start time
+   /// of the packet.  This time relates to when the broker received the packet.
+   google.protobuf.Timestamp start_time = 2;
+}
