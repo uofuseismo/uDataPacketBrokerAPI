@@ -6,7 +6,7 @@ import "uDataPacketBroker/v1/packet.proto";
 import "uDataPacketBroker/v1/publish_response.proto";
 
 /*!
- * Applications importing or forwadring data send their seismic data packets to 
+ * Applications importing or forwarding data send their seismic data packets to 
  * this service.
  */
 service PublishService {
