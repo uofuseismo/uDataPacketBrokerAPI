@@ -10,7 +10,7 @@ import "uDataPacketBrokerAPI/v1/data_type.proto";
  * Defines a data packet to submit to the publisher.  This amounts to a 
  * stream identifier, a start time, sampling rate, and data. 
  */
-message Packet {
+message PublishPacket {
    /// The stream identifier that submitted this packet.
    StreamIdentifier stream_identifier = 1;
    /// The time of the first sample in the data packet (UTC).
@@ -23,4 +23,7 @@ message Packet {
    uint32 number_of_samples = 5;
    /// The actual samples.  This is always stored in little endian.
    bytes data = 6;
+   /// Allows publishers to tag outbound packets so as to appropriately resume
+   /// publication streams with (new) brokers.
+   uint64 sequence_number = 7;
 }
