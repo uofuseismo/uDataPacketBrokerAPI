@@ -5,7 +5,9 @@ package UDataPacketBroker.V1;
 /**
  * Requests packets from all streams beginning with (and including) the given sequence
  * number.  Note, this is best effort and it is possible that the packet with the
- * specified sequence number has been deleted.
+ * specified sequence number has been deleted.  Additionally, after backfill has
+ * completed this behaves like StreamAll whereby the client will automatically receive
+ * newly acquired streams.
  */
 message StreamAllFromSequence {
    /// A request identifier.
