@@ -9,7 +9,7 @@ package UDataPacketBroker.V1;
  * completed this behaves like StreamAll whereby the client will automatically receive
  * newly acquired streams.
  */
-message StreamAllFromSequence {
+message StreamAllFromSequenceRequest {
    /// A request identifier.
    string identifier = 1 [default = ""];
    /// The sequence number at which to commence the subscription.
